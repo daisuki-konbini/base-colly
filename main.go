@@ -38,6 +38,6 @@ func main() {
 	defer file.Close()
 	json, _ := json.Marshal(collect)
 	io.WriteString(file, string(json))
-	fmt.Printf("spent time => %f s\n", time.Since(now).Minutes())
+	fmt.Printf("spent time => %f min\n", time.Since(now).Minutes())
 	fmt.Printf("number of data=> %d \n", len(collect))
 }
